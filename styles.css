@@ -1,0 +1,90 @@
+/* Definições básicas e reset */
+body {
+    /* Fundo escuro sutil para simular o ambiente da arte */
+    background-color: #2c2f33; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha no topo (pode usar 'center' para centralizar verticalmente também) */
+    min-height: 100vh; /* Ocupa a altura total da viewport */
+    margin: 0;
+    padding-top: 50px; /* Espaço do topo */
+}
+
+/* Contêiner principal que simula a "janela" da arte */
+.container {
+    width: 90%; /* Largura em telas menores */
+    max-width: 600px; /* Largura máxima na tela */
+    background-color: #36393f; /* Cor de fundo do painel, um cinza mais claro */
+    border: 1px solid #4a4d52; /* Borda sutil */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombra para profundidade */
+    padding: 20px 0; /* Padding interno, zero nas laterais pois o conteúdo será ajustado */
+    text-align: center; /* Centraliza o texto e botões por padrão */
+}
+
+/* Header (Título) */
+.header {
+    background-color: #36393f; /* Mesma cor do container */
+    padding: 10px 20px;
+}
+
+.header h1 {
+    color: #ffffff; /* Cor branca para o título */
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Área de Conteúdo */
+.content-area {
+    padding: 20px 40px; /* Padding interno para texto e imagem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description {
+    color: #b9bbbe; /* Cinza claro para o texto */
+    font-size: 16px;
+    margin-bottom: 25px; /* Espaço abaixo do texto */
+    text-align: center;
+}
+
+/* Wrapper da Imagem */
+.image-wrapper {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 400px; /* Tamanho máximo da imagem */
+    overflow: hidden; /* Garante que a imagem não saia do limite */
+    border: 2px solid #5a5d62; /* Borda fina ao redor da imagem */
+}
+
+.image-wrapper img {
+    width: 100%; /* Imagem preenche o wrapper */
+    height: auto;
+    display: block; /* Remove o espaço extra abaixo da imagem */
+}
+
+/* Footer (Botão) */
+.footer {
+    padding: 10px 40px;
+    border-top: 1px solid #4a4d52; /* Linha de separação acima do botão */
+    background-color: #36393f; /* Mesma cor do container */
+}
+
+.play-button {
+    background-color: #5d5d61; /* Cor de fundo do botão, um cinza escuro */
+    color: white;
+    border: 1px solid #6f7073;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.play-button:hover {
+    background-color: #6d6d71; /* Cor mais clara ao passar o mouse */
+    border-color: #7f8083;
+}
