@@ -3,26 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maze Runner - Quiz</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Maze Runner - O Teste da C.R.U.E.L.</title>
+    <link rel="stylesheet" href="style2.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>Maze Runner</h1>
+    <div class="container-principal">
+        <header class="cabecalho">
+            <h1>Maze Runner - O Teste</h1>
         </header>
 
-        <main class="content-area">
-            <p class="description">Não há memória. Só o labirinto. Descubra qual personagem você seria nessa luta pela liberdade.</p>
+        <main id="areaPrincipal" class="area-quiz">
             
-            <div class="image-wrapper">
-                <img src="maze runner.jpg" alt="Elenco de Maze Runner">
-            </div>
-        </main>
+            <section id="tela-introducao" class="card">
+                <h1 class="texto-introducao">
+                    Não há memória. Só o labirinto. Descubra qual personagem você seria nessa luta pela liberdade.
+                </h1>
+                <img src="maze runner.jpg" alt="Personagens de Maze Runner" class="imagem-intro">
+                <button class="botao" id="botao-jogar">Começar o Teste</button>
+            </section>
 
-        <footer class="footer">
-            <button class="play-button">Jogar</button>
-        </footer>
+            <section id="tela-questionario" style="display: none;">
+                <div class="bloco-pergunta">
+                    <p id="texto-pergunta" class="texto-pergunta">Carregando pergunta...</p>
+                </div>
+                
+                <div class="conteudo-flex">
+                    <div class="container-imagem">
+                        <img id="imagem-pergunta" src="maze runner.jpg" alt="Labirinto" class="imagem-quiz">
+                    </div>
+                    
+                    <div id="container-opcoes" class="container-opcoes">
+                        </div>
+                </div>
+
+                <button class="botao" id="botao-proxima" disabled>Próxima</button>
+            </section>
+
+            <section id="tela-resultado" style="display: none;" class="card">
+                <h2>Seu Resultado no Teste da C.R.U.E.L.:</h2>
+                <h1 id="nome-resultado" class="nome-personagem"></h1>
+                <img id="imagem-resultado" src="" alt="Imagem do Personagem" class="imagem-resultado">
+                <p id="descricao-resultado" class="descricao-personagem"></p>
+                <p id="pontuacao-resultado" class="pontuacao-final"></p>
+                
+                <button class="botao botao-reset" id="botao-recomecar">Recomeçar Jogo</button>
+            </section>
+
+        </main>
     </div>
+
+    <script src="script.js"></script>
 </body>
-</html>
