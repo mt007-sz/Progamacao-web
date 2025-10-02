@@ -1,15 +1,4 @@
-/*
- * Esquema de Cores em Português
- */
-:root {
-    --cor-fundo-principal: #000000;      /* Fundo do Body (Preto) */
-    --cor-area-clara: #D9D9D9;           /* Fundo da área de pergunta/Cabeçalho (Claro) */
-    --cor-texto-escuro: #000000;         /* Texto no fundo claro (Preto) */
-    --cor-texto-claro: #FFFFFF;          /* Texto no fundo escuro (Branco) */
-    --cor-borda: #000000;                /* Borda/Pontos/Botão (Preto) */
-}
 
-/* Reset Básico */
 * {
     padding: 0;
     margin: 0;
@@ -25,8 +14,6 @@ body {
     min-height: 100vh;
     padding-top: 50px;
 }
-
-/* 1. Contêiner Principal */
 .container-principal {
     width: 90%;
     max-width: 850px; 
@@ -50,15 +37,12 @@ body {
     font-size: 24px;
     margin: 0;
 }
-
-/* 3. Área Principal do Quiz */
 .area-quiz {
     background-color: var(--cor-area-clara);
     padding: 20px 40px 30px 40px; 
     color: var(--cor-texto-escuro); 
 }
 
-/* Estilos de Card (Introdução/Resultado) */
 #tela-introducao, #tela-resultado {
     text-align: center;
     padding: 20px 0;
@@ -97,8 +81,6 @@ body {
     color: #444; 
     margin-top: 15px;
 }
-
-/* 4. Layout Flexível da Pergunta */
 .bloco-pergunta {
     text-align: center;
     margin-bottom: 25px;
@@ -117,8 +99,6 @@ body {
     gap: 40px; 
     padding-bottom: 20px;
 }
-
-/* Container da Imagem (60% da largura) */
 .container-imagem {
     flex: 0 0 60%; 
     max-width: 60%; 
@@ -131,8 +111,6 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.2); 
     border-radius: 4px;
 }
-
-/* Container das Opções (40% da largura) */
 .container-opcoes {
     flex: 0 0 40%; 
     max-width: 40%;
@@ -148,11 +126,16 @@ body {
     margin-bottom: 30px; 
     text-align: left;
 }
-
-/* 5. Estilização dos Pontos de Seleção */
 .lista-opcoes input[type="radio"] {
-    opacity: 0;
     position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 .lista-opcoes label {
@@ -162,21 +145,41 @@ body {
     cursor: pointer;
     padding-left: 30px; 
     position: relative;
-    color: var(--cor-texto-escuro); 
+    color: var(--cor-texto-escuro);
+    transition: font-weight 0.2s; 
 }
-
 .lista-opcoes label::before {
     content: '';
     position: absolute;
     left: 0;
-    width: 15px; 
-    height: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px; /* Aumentado um pouco */
+    height: 18px;
     border-radius: 50%; 
-    background-color: var(--cor-borda); 
-    border: 1px solid var(--cor-borda);
+    /* Base: Círculo vazado (borda preta, fundo claro) */
+    background-color: var(--cor-area-clara); 
+    border: 2px solid var(--cor-borda);
+    transition: all 0.2s ease;
 }
-
-/* 6. Botões */
+.lista-opcoes label::after {
+    content: '';
+    position: absolute;
+    left: 5px; /* Centraliza o ponto */
+    top: 50%;
+    transform: translateY(-50%) scale(0); /* Começa invisível e pequeno */
+    width: 8px; /* Tamanho do ponto */
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--cor-borda); /* Cor do preenchimento */
+    transition: transform 0.2s ease;
+}
+.lista-opcoes input[type="radio"]:checked + label::after {
+    transform: translateY(-50%) scale(1); /* Ponto aparece */
+}
+.lista-opcoes input[type="radio"]:checked + label {
+    font-weight: bold;
+}
 .botao {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -195,13 +198,22 @@ body {
 .botao:hover:not(:disabled) {
     background-color: #333333;
 }
-
 .botao:disabled {
-    opacity: 0.5;
+    background-color: #666666; 
+    opacity: 0.7;
     cursor: not-allowed;
 }
+.botao.ativo {
+    background-color: var(--cor-area-clara); /* Cor clara para destacar */
+    color: var(--cor-texto-escuro); /* Texto preto */
+    border-color: var(--cor-area-clara); 
+    opacity: 1;
+    cursor: pointer;
+}
 
-/* 7. Responsividade */
+.botao.ativo:hover {
+    background-color: #c8c8c8; 
+}
 @media (max-width: 768px) {
     .area-quiz {
         padding: 20px;
