@@ -1,57 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maze Runner - O Teste da C.R.U.E.L.</title>
-    <link rel="stylesheet" href="style2.css"> 
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+    <title>Maze Runner</title>
 </head>
 <body>
-    <div class="container-principal">
-        <header class="cabecalho">
-            <h1>Maze Runner - O Teste</h1>
-        </header>
+    <nav><h1>Maze Runner</h1></nav><br>
 
-        <main id="areaPrincipal" class="area-quiz">
-            
-            <section id="tela-introducao" class="card">
-                <h1 class="texto-introducao">
-                    Não há memória. Só o labirinto. Descubra qual personagem você seria nessa luta pela liberdade.
-                </h1>
-                <img src="maze runner.jpg" alt="Personagens de Maze Runner" class="imagem-intro">
-                <button class="botao" id="botao-jogar">Começar o Teste</button>
-            </section>
-
-            <section id="tela-questionario" style="display: none;">
-                <div class="bloco-pergunta">
-                    <p id="texto-pergunta" class="texto-pergunta">Carregando pergunta...</p>
-                </div>
-                
-                <div class="conteudo-flex">
-                    <div class="container-imagem">
-                        <img id="imagem-pergunta" src="maze runner.jpg" alt="Labirinto" class="imagem-quiz">
-                    </div>
-                    
-                    <div id="container-opcoes" class="container-opcoes">
-                        </div>
-                </div>
-
-                <button class="botao" id="botao-proxima" disabled>Próxima</button>
-            </section>
-
-            <section id="tela-resultado" style="display: none;" class="card">
-                <h2>Seu Resultado no Teste da C.R.U.E.L.:</h2>
-                <h1 id="nome-resultado" class="nome-personagem"></h1>
-                <img id="imagem-resultado" src="" alt="Imagem do Personagem" class="imagem-resultado">
-                <p id="descricao-resultado" class="descricao-personagem"></p>
-                <p id="pontuacao-resultado" class="pontuacao-final"></p>
-                
-                <button class="botao botao-reset" id="botao-recomecar">Recomeçar Jogo</button>
-            </section>
-
-        </main>
+    <div class="card">
+        <h1>Bem-vindo ao Labirinto.</h1><br>
+        <p>Você acorda em um lugar desconhecido, cercado por muros gigantescos e rostos que parecem tão perdidos quanto o seu. <br>
+        Sem memórias, sem respostas... apenas uma certeza: escapar não será fácil.
+        No universo de Maze Runner, cada escolha pode <br>ser a diferença entre a sobrevivência e o fim. 
+        Agora, é a sua vez de entrar nesse desafio.</p>
+        <h1>Descubra qual personagem você seria nessa luta pela liberdade</h1>
+        <img src="Maze_Runner.jpg" alt="Imagem dos personagens e do labirinto"><br>
+        <p></p>
+        <button id="botao">Jogar</button>
     </div>
 
     <script src="script.js"></script>
 </body>
+</html>
