@@ -31,27 +31,27 @@ const PERSONAGENS = {
     THOMAS: {
         nome: "Thomas",
         descricao: "Você é o Thomas, o líder por natureza. Você é movido pela curiosidade, desafia a autoridade e não hesita em correr riscos para descobrir a verdade e proteger seus amigos. Sua pontuação reflete sua coragem e busca por respostas.",
-        imagemUrl: "thomasmaze.jpg" 
+        imagemUrl: "thomas.jpg" 
     },
     NEWT: {
         nome: "Newt",
         descricao: "Você é o Newt, a cola que mantém o grupo unido. Sua lealdade, calma e inteligência tática fazem de você um mediador essencial. Você valoriza a ordem, mas luta com fervor pelos seus companheiros.",
-        imagemUrl: "netwmaze.webp" 
+        imagemUrl: "newt.png" 
     },
     MINHO: {
         nome: "Minho",
         descricao: "Você é o Minho, pura ação e coragem. Você é o Corredor mais rápido, um especialista em sobrevivência e extremamente direto. Seu foco está em fazer o trabalho e enfrentar os perigos de frente.",
-        imagemUrl: "minhomaze.jpg" 
+        imagemUrl: "minho.jpg" 
     },
 };
 
 const QUESTIONARIO = [
 
     new Pergunta(1, 
-        "Quando confrontado com uma regra estabelecida, qual é a sua reação?", [
-        new Opcao("Questiono a regra e procuro uma maneira melhor de fazer as coisas.", new PontuacaoPersonagem(3, 1, 2)), 
-        new Opcao("Sigo a regra, pois a ordem é vital para a sobrevivência do grupo.", new PontuacaoPersonagem(1, 3, 2)), 
-        new Opcao("Se a regra me impede, eu a ignoro e sigo o meu próprio caminho.", new PontuacaoPersonagem(2, 2, 3)), 
+        "Como você age diante de uma situação totalmente nova e caótica?", [
+        new Opcao("Analiso o ambiente e tento encontrar uma estratégia.", new PontuacaoPersonagem(3, 1, 2)), 
+        new Opcao("Corro para ajudar e lidero pelo exemplo.", new PontuacaoPersonagem(1, 3, 2)), 
+        new Opcao("Tento manter o grupo unido e calmo, mesmo sem ter todas as respostas.", new PontuacaoPersonagem(2, 2, 3)), 
     ]),
     new Pergunta(2, 
         "O que você valoriza mais em um amigo?", [
@@ -72,10 +72,10 @@ const QUESTIONARIO = [
         new Opcao("Ser muito impaciente e preferir a ação à deliberação.", new PontuacaoPersonagem(2, 1, 3)), 
     ]),
     new Pergunta(5, 
-        "Como você reagiria ao ver um Gricko pela primeira vez?", [
-        new Opcao("Fugiria imediatamente, mas voltaria depois com um plano de ataque.", new PontuacaoPersonagem(1, 2, 3)), 
-        new Opcao("Tentaria observar e entender seu padrão de movimento.", new PontuacaoPersonagem(3, 1, 2)), 
-        new Opcao("Chamaria a atenção dos outros e tentaria coordenar uma defesa.", new PontuacaoPersonagem(2, 3, 1)), 
+        "Você está preso(a) em um labirinto. O que faz?", [
+        new Opcao("Exploro cada canto sem medo.", new PontuacaoPersonagem(1, 2, 3)), 
+        new Opcao("Tento entender como ele funciona para achar uma saída lógica.", new PontuacaoPersonagem(3, 1, 2)), 
+        new Opcao("Organizo o grupo e tento manter todos seguros e com esperança.", new PontuacaoPersonagem(2, 3, 1)), 
     ]),
     new Pergunta(6, 
         "Em uma discussão, você tende a ser:", [
@@ -84,10 +84,10 @@ const QUESTIONARIO = [
         new Opcao("O que busca a causa raiz do problema, mesmo que gere mais discussão.", new PontuacaoPersonagem(3, 2, 1)), 
     ]),
     new Pergunta(7, 
-        "Qual objeto você faria questão de levar para o Glade?", [
-        new Opcao("Um mapa em branco para começar a registrar tudo.", new PontuacaoPersonagem(3, 2, 1)), 
-        new Opcao("Uma ferramenta simples, mas útil, como uma faca multiuso.", new PontuacaoPersonagem(2, 3, 1)), 
-        new Opcao("Um kit de primeiros socorros e suprimentos essenciais.", new PontuacaoPersonagem(1, 2, 3)), 
+        "Se fosse um corredor no labirinto, o que te motivaria?", [
+        new Opcao("A adrenalina e a chance de descobrir algo novo.", new PontuacaoPersonagem(3, 2, 1)), 
+        new Opcao("A busca por respostas e justiça.", new PontuacaoPersonagem(2, 3, 1)), 
+        new Opcao("Proteger quem não pode correr.", new PontuacaoPersonagem(1, 2, 3)), 
     ]),
     new Pergunta(8, 
         "Se você fosse capturado, qual seria sua prioridade?", [
